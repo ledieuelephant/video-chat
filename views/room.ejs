@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a8eed04366.js"></script>
+    <script src='/socket.io/socket.io.js' defer></script>
+    <script src="script.js" defer></script>
+    <script>
+        const ROOM_ID = "<%= roomId %>"
+    </script>
+    <title>Room</title>
+</head>
+<body>
+    <div id="video-grid" class="grid grid-rows-3 grid-cols-3 gap-4">
+
+    </div>
+    <div class="fixed bottom-6 w-full flex justify-center gap-5">
+        <button id="off-call" class="w-[64px] h-[64px] bg-red-500 rounded-full flex justify-center items-center">
+            <img width="32px" src="https://img.icons8.com/ios-filled/512/call-disconnected.png" />
+        </button>
+        <button id="off-camera" class="border w-[64px] h-[64px] bg-white rounded-full flex justify-center items-center">
+            <img width="32px" src="https://img.icons8.com/ios-filled/512/video-call.png" />
+        </button>
+        <button id="off-micro" class="border w-[64px] h-[64px] bg-white rounded-full flex justify-center items-center">
+            <img width="32px" src="https://img.icons8.com/ios-glyphs/512/block-microphone.png" />
+        </button>
+    </div>
+</body>
+</html>
