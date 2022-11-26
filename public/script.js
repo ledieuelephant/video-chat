@@ -41,6 +41,7 @@ function addVideoStream(video, stream){
     video.addEventListener('loadedmetadata', () => {
         video.play()
     })
+    video.classList.add('rounded-xl')
     videoGrid.append(video)
 }
 
@@ -54,7 +55,6 @@ function connectToNewUser(userId, stream){
         video.remove()
     })
     peers[userId] = call
-    // connection to socket io
 }
 
 document.getElementById('off-call').addEventListener('click', () => {
